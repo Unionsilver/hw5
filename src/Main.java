@@ -90,7 +90,7 @@ public class Main {
                 System.out.println("Осень");
                 break;
             default:
-                System.out.println("введите число от 1 до 12");
+                System.out.println("введите число от 1 до 12!");
         }
     }
 }
