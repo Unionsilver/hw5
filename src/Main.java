@@ -11,11 +11,10 @@ public class Main {
     public static void task1() {
         int clientOs = 1;
         int iOs = 1;
-        int android = 0;
+        int android = 2;
         if (iOs == clientOs) {
             System.out.println("Пользователь пользуеться IOS");
-        }
-        if (android == clientOs) {
+        } else if (android == clientOs){
             System.out.println("Пользователь пользуеться Android");
         }
     }
@@ -24,16 +23,16 @@ public class Main {
         int clientDeviceYear = 2015;
         int clientOs = 1;
         int iOs = 1;
-        int android = 0;
+        int android = 2;
         if (iOs == clientOs) {
             System.out.println("Пользователь пользуеться IOS");
             if (clientDeviceYear < 2015) {
                 System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-            } else {
+            } else  {
                 System.out.println("Установка приложения");
             }
         }
-        if (android == clientOs) {
+        else if (android == clientOs) {
             System.out.println("Пользователь пользуеться Android");
             if (clientDeviceYear < 2015) {
                 System.out.println("Установите облегченную версию приложения для Android по ссылке");
@@ -45,8 +44,7 @@ public class Main {
 
     public static void task3() {
         int year = 2021;
-        boolean leapYear = ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0));
-        if (leapYear) {
+        if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
             System.out.println("Год высокостный");
         } else {
             System.out.println("Не высокостный");
@@ -55,12 +53,16 @@ public class Main {
 
     public static void task4() {
         int distance = 95;
+        int deliveryDays;
         if (distance < 20) {
-            System.out.println("Потребуется дней: 1 день срок доставки");
+            deliveryDays = 1;
+            System.out.println("Потребуется дней: " + deliveryDays + " день срок доставки");
         } else if ((distance >= 20) && (distance < 60)) {
-            System.out.println("Потребуется дней: 2 дня срок доставки");
+            deliveryDays = 2;
+            System.out.println("Потребуется дней: " + deliveryDays + " дня срок доставки");
         } else if ((distance >= 60) && (distance < 100)) {
-            System.out.println("Потребуется дней: 3 дня срок доставки");
+            deliveryDays = 3;
+            System.out.println("Потребуется дней: " + deliveryDays + " дня срок доставки");
         } else {
             System.out.println("Свыше 100 км доставки нет.");
         }
@@ -73,7 +75,7 @@ public class Main {
             case 1:
             case 2:
                 System.out.println("Зима");
-            break;
+                break;
             case 3:
             case 4:
             case 5:
@@ -90,7 +92,10 @@ public class Main {
                 System.out.println("Осень");
                 break;
             default:
-                System.out.println("введите число от 1 до 12");
+                System.out.println("введите число от 1 до 12!");
         }
+
     }
 }
+
+
