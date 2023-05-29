@@ -11,9 +11,10 @@ public class Main {
     public static void task1() {
         int clientOs = 1;
         int iOs = 1;
+        int android = 2;
         if (iOs == clientOs) {
             System.out.println("Пользователь пользуеться IOS");
-        } else {
+        } else if (android == clientOs){
             System.out.println("Пользователь пользуеться Android");
         }
     }
@@ -22,15 +23,16 @@ public class Main {
         int clientDeviceYear = 2015;
         int clientOs = 1;
         int iOs = 1;
+        int android = 2;
         if (iOs == clientOs) {
             System.out.println("Пользователь пользуеться IOS");
             if (clientDeviceYear < 2015) {
                 System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-            } else {
+            } else  {
                 System.out.println("Установка приложения");
             }
         }
-        else  {
+        else if (android == clientOs) {
             System.out.println("Пользователь пользуеться Android");
             if (clientDeviceYear < 2015) {
                 System.out.println("Установите облегченную версию приложения для Android по ссылке");
@@ -92,6 +94,7 @@ public class Main {
             default:
                 System.out.println("введите число от 1 до 12!");
         }
+
     }
 }
 
